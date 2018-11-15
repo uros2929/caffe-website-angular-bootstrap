@@ -1,0 +1,231 @@
+<div class="container menu">
+  <div class="container divMenu">
+    <div class="container drinks" (click)="showMenu(showDrinks,showFood)">
+        <h5>Drinks</h5>
+    </div>
+    <div class="container food" (click)="showMenu(showFood,showDrinks)">
+        <h5>Food</h5>
+    </div>
+  </div>
+  <div class="container showProducts">
+    <div class="container showDrinks" #showDrinks>
+      <ul>
+        <li>
+          <h4 (click)="showModal(modalCoffee)">Coffee</h4>
+        </li>
+        <hr>
+        <li>
+          <h4 (click)="showModal(modalTea)">Tea</h4>
+        </li>
+        <hr>
+        <li>
+          <h4 (click)="showModal(modalBeer)">Beer</h4>
+        </li>
+        <hr>
+        <li>
+          <h4 (click)="showModal(modalWine)">Wine</h4>
+        </li>
+        <hr>
+      </ul>
+    </div>
+    <div class="container showFood" #showFood>
+      <ul>
+        <li>
+          <h4 (click)="showModal(modalStarters)">Starters</h4>
+        </li>
+        <hr>
+        <li>
+          <h4 (click)="showModal(modalTheSteakExperience)">The Steak Experience</h4>
+        </li>
+        <hr>
+        <li>
+          <h4 (click)="showModal(modalBurgers)">Burgers</h4>
+        </li>
+        <hr>
+        <li>
+          <h4 (click)="showModal(modalFishSaladVege)">Fish,Salad & Vegeterian</h4>
+        </li>
+        <hr>
+        <li>
+          <h4 (click)="showModal(modalDesserts)">Desserts</h4>
+        </li>
+        <hr>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="modal modalCoffee" #modalCoffee>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Coffee</h5>
+        <button (click)="closeModal(modalCoffee)">
+          <span>&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <ul>
+          <li *ngFor="let coffee of coffees">
+            {{coffee}}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal modalTea" #modalTea>
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Tea</h5>
+          <button (click)="closeModal(modalTea)">
+            <span>&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <ul>
+            <li *ngFor="let tea of teas">
+              {{tea}}
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal modalBeer" #modalBeer>
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Beer</h5>
+            <button (click)="closeModal(modalBeer)">
+              <span>&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <ul>
+              <li *ngFor="let beer of beers">
+                {{beer}}
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal modalWine" #modalWine>
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Wine</h5>
+              <button (click)="closeModal(modalWine)">
+                <span>&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <ul>
+                <li *ngFor="let wine of wines">
+                  {{wine}}
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal modalStarters" #modalStarters>
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">Starters</h5>
+                <button (click)="closeModal(modalStarters)">
+                  <span>&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <ul>
+                  <li *ngFor="let starter of starters">
+                    {{starter}}
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal modalTheSteakExperience" #modalTheSteakExperience>
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">The Steak Experience</h5>
+                  <button (click)="closeModal(modalTheSteakExperience)">
+                    <span>&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <ul>
+                    <li *ngFor="let TheSteakExperience of TheSteakExperiences">
+                      {{TheSteakExperience}}
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal modalBurgers" #modalBurgers>
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title">Burgers</h5>
+                    <button (click)="closeModal(modalBurgers)">
+                      <span>&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <ul>
+                      <li *ngFor="let burger of burgers">
+                        {{burger}}
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal modalFishSaladVege" #modalFishSaladVege>
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title">Fish,Salad & Vegeterian</h5>
+                      <button (click)="closeModal(modalFishSaladVege)">
+                        <span>&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <ul>
+                        <li *ngFor="let fishSaladVege of fishSaladVeges">
+                          {{fishSaladVege}}
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal modalDesserts" #modalDesserts>
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title">Desserts</h5>
+                        <button (click)="closeModal(modalDesserts)">
+                          <span>&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <ul>
+                          <li *ngFor="let dessert of desserts">
+                            {{dessert}}
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+      
+    
+  

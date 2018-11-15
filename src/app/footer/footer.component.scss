@@ -1,0 +1,14 @@
+.footer{
+    position: fixed;
+    bottom: 0;
+    background-color: #343a40;
+    width: 100%;
+    min-height: 50px;
+    text-align: center;
+    p{
+        color: rgba(255, 255, 255, 0.75);
+    }
+    a{
+        color: rgba(255, 255, 255, 0.75); 
+    }
+}

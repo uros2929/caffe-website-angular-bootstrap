@@ -1,0 +1,59 @@
+<div class="alert alert-success alertSuccess" role="alert" #alertSuccess>
+    Table reserved! We shall contact you soon, to check your reservation! 
+        <span (click)="closeModal(alertSuccess)">&times;</span>
+  </div>
+  <div class="alert alert-danger alertDanger" role="alert" #alertDanger>
+      This table is not free for this time, please check tables!
+      <span (click)="closeModal(alertDanger)">&times;</span>
+    </div>
+<div class="container tableReservationForm">
+  <form action="?" method="POST" (submit)="checkTables($event)">
+    <label for="date">CHOOSE DATE & TIME: </label><br>
+    <input type="date" name="date"  value="{{date}}" #chooDate>
+    <input type="time" name="time" value="00:00" #chooTime> 
+    <br>
+    <input type="submit" value="Check tables" class="btn btn-primary">
+  </form>
+</div>
+<div class="container tableReservation">
+  <div class="table1" id="Table1" (click)="clickOnTable($event,modalTable,dateTime)">Table1</div>
+  <div class="table2" id="Table2" (click)="clickOnTable($event,modalTable,dateTime)">Table2</div>
+  <div class="table3" id="Table3" (click)="clickOnTable($event,modalTable,dateTime)">Table3</div>
+  <div class="table2" id="Table4" (click)="clickOnTable($event,modalTable,dateTime)">Table4</div>
+  <div class="table1" id="Table5" (click)="clickOnTable($event,modalTable,dateTime)">Table5</div>
+  <div class="table3" id="Table6" (click)="clickOnTable($event,modalTable,dateTime)">Table6</div>
+  <div class="table1" id="Table7" (click)="clickOnTable($event,modalTable,dateTime)">Table7</div>
+  <div class="table2" id="Table8" (click)="clickOnTable($event,modalTable,dateTime)">Table8</div>
+  <div class="table3" id="Table9" (click)="clickOnTable($event,modalTable,dateTime)">Table9</div>
+  <div class="table1" id="Table10" (click)="clickOnTable($event,modalTable,dateTime)">Table10</div>
+  <div class="table3" id="Table11" (click)="clickOnTable($event,modalTable,dateTime)">Table11</div>
+  <div class="table2" id="Table12" (click)="clickOnTable($event,modalTable,dateTime)">Table12</div>
+  <div class="table1" id="Table13" (click)="clickOnTable($event,modalTable,dateTime)">Table13</div>
+  <div class="table2" id="Table14" (click)="clickOnTable($event,modalTable,dateTime)">Table14</div>
+  <div class="table3" id="Table15" (click)="clickOnTable($event,modalTable,dateTime)">Table15</div>
+</div>
+
+<div class="modal modalTable" #modalTable>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title"></h5>
+        <button (click)="closeModal(modalTable)">
+          <span>&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+          <form action="?" method="POST" (submit)=saveReservation($event,modalTable,alertSuccess,alertDanger)>
+            <input type="text" #dateTime>
+            <input type="text" placeholder="Name">
+            <input type="text" placeholder="Last name">
+            <input type="text" placeholder="Phone number">
+            <input type="submit" value="Reserve" class="btn btn-outline-primary">
+          </form>
+      </div>
+      <div class="modal-footer">
+      </div>
+    </div>
+  </div>
+</div>
+

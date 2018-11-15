@@ -1,0 +1,49 @@
+.menu{
+    border: 2px solid white;
+    min-height: 700px;
+    margin-top: 2%;
+    background-color: rgb(150, 131, 94);
+   
+}
+.divMenu{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+}
+.drinks,.food{
+    display: flex;
+    border: 2px solid white;
+    width: 30%;
+    height: 50px;
+    position: relative;
+    float: left;
+    text-align: center;
+    background-color: #343a40;
+    justify-content: center;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+}
+.drinks:hover,.food:hover{
+    color: rgba(255, 255, 255, 0.75);
+}
+.showProducts{
+    border: 2px solid white;
+    min-height: 600px;
+    width: 50%;
+    margin-top: 1%;
+    background-color: white;
+    overflow-y: scroll;
+    .showFood{
+        display: none;
+        h4{
+            cursor: pointer;
+        }
+    }
+    .showDrinks{
+        display: none;
+        h4{
+            cursor: pointer;
+        }
+    }
+}

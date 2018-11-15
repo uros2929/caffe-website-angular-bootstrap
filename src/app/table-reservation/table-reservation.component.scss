@@ -1,0 +1,77 @@
+.tableReservation{
+    border: 2px solid white;
+    margin-top: 1%;
+    background-color: rgb(150, 131, 94);
+    min-height: 700px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    .table1,.table3{
+        display: flex;
+        width: 25%;
+        border: 2px solid white;
+        height: 50px;
+        justify-content: center;
+        align-items: center;
+        color: white;
+    }
+    .table2{
+        display: flex;
+        width: 40%;
+        border: 2px solid white;
+        height: 50px;
+        justify-content: center;
+        align-items: center;
+        color: white;
+    }
+}
+.tableReservationForm{
+    margin-top: 2%;
+    display: flex;  
+    justify-content: center;
+    label{
+        color: white;
+    }
+    input[type=submit]{
+        width: 100%;
+    }
+}
+.modalTable{
+    display: none;
+}
+.modal-body{
+    form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+    input{
+        text-align: center;
+        width: 100%;
+    }
+    input[type=submit]{
+        margin-top: 2%;
+        width: 50%;
+    }
+}
+.alertSuccess{
+    width: 50%;
+    margin: 0 auto;
+    display: none;
+    span{
+        position: relative;
+        float: right;
+        cursor: pointer;
+    }
+}
+.alertDanger{
+    width: 50%;
+    margin: 0 auto;
+    display: none;
+    span{
+        position: relative;
+        float: right;
+        cursor: pointer;
+    }
+}
