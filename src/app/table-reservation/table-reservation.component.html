@@ -9,8 +9,8 @@
 <div class="container tableReservationForm">
   <form action="?" method="POST" (submit)="checkTables($event)">
     <label for="date">CHOOSE DATE & TIME: </label><br>
-    <input type="date" name="date"  value="{{date}}" #chooDate>
-    <input type="time" name="time" value="00:00" #chooTime> 
+    <input type="date" name="date"  value="{{date}}" #chooDate required>
+    <input type="time" name="time" value="08:00" min="08:00" max="22:00" step="7200" #chooTime required> 
     <br>
     <input type="submit" value="Check tables" class="btn btn-primary">
   </form>
@@ -45,9 +45,9 @@
       <div class="modal-body">
           <form action="?" method="POST" (submit)=saveReservation($event,modalTable,alertSuccess,alertDanger)>
             <input type="text" #dateTime>
-            <input type="text" placeholder="Name">
-            <input type="text" placeholder="Last name">
-            <input type="text" placeholder="Phone number">
+            <input type="text" placeholder="Name" required>
+            <input type="text" placeholder="Last name" required>
+            <input type="text" placeholder="Phone number" required>
             <input type="submit" value="Reserve" class="btn btn-outline-primary">
           </form>
       </div>

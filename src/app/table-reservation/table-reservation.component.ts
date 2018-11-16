@@ -16,7 +16,7 @@ export class TableReservationComponent implements OnInit {
   newDate=new Date;
   newYear=this.newDate.getFullYear();
   newMonth=this.newDate.getMonth();
-  newDay=this.newDate.getDay();
+  newDay=this.newDate.getDate();
   date=this.getDate();
   
   constructor(private FunctionMin:FunctionMinService) { }
@@ -24,19 +24,19 @@ export class TableReservationComponent implements OnInit {
   
 
   ngOnInit() {
-  
+   
   }
 
 getDate(){
  if (this.newMonth<10 && this.newDay<10) {
    return this.newYear+"-"+"0"+this.newMonth+"-"+"0"+this.newDay
- } 
- if (this.newDay<10) {
+ }else if (this.newDay<10) {
   return this.newYear+"-"+this.newMonth+"-"+"0"+this.newDay
- }
- if(this.newMonth<10)
+ }else if(this.newMonth<10){
  return this.newYear+"-"+"0"+this.newMonth+"-"+this.newDay
-
+}else{
+  return this.newYear+"-"+this.newMonth+"-"+this.newDay
+}
 }
 
 clickOnTable(event,modalTable,dateTime){

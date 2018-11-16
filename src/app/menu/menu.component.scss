@@ -30,7 +30,7 @@
 .showProducts{
     border: 2px solid white;
     min-height: 600px;
-    width: 50%;
+    width: 70%;
     margin-top: 1%;
     background-color: white;
     overflow-y: scroll;
@@ -38,12 +38,22 @@
         display: none;
         h4{
             cursor: pointer;
+            font-style: italic;
         }
     }
     .showDrinks{
         display: none;
         h4{
             cursor: pointer;
+            font-style: italic;
         }
+    }
+}
+.modal{
+    span{
+        cursor: pointer;
+    }
+    h5{
+        font-style: italic;
     }
 }
